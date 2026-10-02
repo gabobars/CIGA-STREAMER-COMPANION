@@ -1,0 +1,44 @@
+<div id="companion-root">
+
+    <div id="companion">
+
+        <div id="pet-anchor">
+
+            <img
+                id="pet-shadow"
+                class="pet-shadow"
+                alt=""
+                aria-hidden="true"
+            >
+
+            <img
+                id="pet-image"
+                class="pet-image"
+                alt="Companion"
+            >
+
+            <div id="companion-info">
+
+                <div
+                    id="companion-bubble"
+                    class="bubble hidden"
+                >
+                    <div id="bubble-text"></div>
+                </div>
+
+                <div id="companion-name">
+                    COMPANION
+                </div>
+
+            </div>
+
+        </div>
+
+        <audio
+            id="companion-audio"
+            preload="none"
+        ></audio>
+
+    </div>
+
+</div>
