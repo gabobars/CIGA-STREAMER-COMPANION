@@ -1,0 +1,693 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: transparent;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#companion-root {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+#companion {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PET ANCHOR
+========================================================= */
+
+#pet-anchor {
+    position: absolute;
+
+    left: 50%;
+    bottom: var(--pet-bottom, 0px);
+
+    width: var(--pet-size, 180px);
+
+    transform:
+        translateX(-50%)
+        scale(var(--pet-scale, 1));
+
+    transform-origin:
+        center bottom;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    animation:
+        companion-idle
+        3.2s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   PET IMAGE
+========================================================= */
+
+#pet-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-width: none;
+
+    object-fit: contain;
+
+    user-select: none;
+
+    pointer-events: none;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* =========================================================
+   SHADOW
+========================================================= */
+
+#pet-shadow {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 100%;
+    height: auto;
+
+    max-width: none;
+
+    object-fit: contain;
+
+    transform:
+        translateX(-50%)
+        translateY(var(--shadow-offset-y, 7px))
+        scaleX(var(--shadow-scale-x, 0.88))
+        scaleY(var(--shadow-scale-y, 0.18));
+
+    transform-origin:
+        center bottom;
+
+    filter:
+        brightness(0)
+        blur(var(--shadow-blur, 5px));
+
+    opacity:
+        var(--shadow-opacity, 0.28);
+
+    pointer-events: none;
+
+    user-select: none;
+
+    z-index: 1;
+
+    animation:
+        companion-shadow
+        3.2s
+        ease-in-out
+        infinite;
+}
+
+#pet-anchor {
+    overflow: visible;
+}
+
+#companion-info {
+    overflow: visible;
+}
+
+#companion-bubble {
+    display: none;
+}
+/* =========================================================
+   INFO
+========================================================= */
+
+#companion-info {
+    position: absolute;
+
+    left: 50%;
+
+    bottom:
+        calc(
+            100% +
+            var(--info-gap, 10px)
+        );
+
+    width: max-content;
+
+    max-width: min(
+        90vw,
+        1000px
+    );
+
+    transform:
+        translateX(-50%);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    gap:
+        var(--bubble-gap, 12px);
+
+    pointer-events:
+        none;
+
+    z-index:
+        50;
+}
+
+
+/* =========================================================
+   NAME
+========================================================= */
+
+#companion-name {
+    display:
+        block;
+
+    max-width:
+        320px;
+
+    padding:
+        4px 10px;
+
+    font-size:
+        var(--name-font-size, 20px);
+
+    font-weight:
+        700;
+
+    line-height:
+        1.1;
+
+    text-align:
+        center;
+
+    white-space:
+        nowrap;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    color:
+        #FFFFFF;
+
+    text-shadow:
+        -1px -1px 0 #000000,
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000;
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================================
+   BUBBLE
+========================================================= */
+
+.bubble {
+    position:
+        relative;
+
+    width:
+        min(
+            var(--bubble-max-width, 360px),
+            80vw
+        );
+
+    max-width:
+        var(--bubble-max-width, 360px);
+
+    padding:
+        14px 18px;
+
+    background:
+        var(--bubble-background, #F3F0E6);
+
+    color:
+        var(--bubble-text-color, #111111);
+
+    border:
+        3px solid
+        var(--bubble-border-color, #111111);
+
+    border-radius:
+        17px;
+
+    box-shadow:
+        0 5px 0
+        rgba(
+            0,
+            0,
+            0,
+            0.15
+        );
+
+    pointer-events:
+        none;
+
+    animation:
+        bubble-in
+        0.22s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+}
+
+.bubble::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        -15px;
+
+    width:
+        20px;
+
+    height:
+        20px;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    background:
+        var(
+            --bubble-background,
+            #F3F0E6
+        );
+
+    border-right:
+        3px solid
+        var(
+            --bubble-border-color,
+            #111111
+        );
+
+    border-bottom:
+        3px solid
+        var(
+            --bubble-border-color,
+            #111111
+        );
+}
+
+#bubble-text {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    font-size:
+        var(--bubble-font-size, 19px);
+
+    font-weight:
+        700;
+
+    line-height:
+        1.3;
+
+    text-align:
+        center;
+
+    overflow-wrap:
+        anywhere;
+}
+
+.hidden {
+    display:
+        none;
+}
+
+
+/* =========================================================
+   TALKING
+========================================================= */
+
+#companion.talking #pet-anchor {
+    animation:
+        companion-talk
+        0.24s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+#companion.talking #pet-shadow {
+    animation:
+        companion-talk-shadow
+        0.24s
+        ease-in-out
+        infinite
+        alternate;
+}
+
+#companion.talking #companion-name {
+    animation:
+        name-talk
+        0.8s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   THINKING
+========================================================= */
+
+#companion.thinking #pet-anchor {
+    animation:
+        companion-thinking
+        0.8s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   ENTER
+========================================================= */
+
+#companion.entering #pet-anchor {
+    animation:
+        companion-enter
+        0.5s
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        );
+}
+
+
+/* =========================================================
+   DISABLED
+========================================================= */
+
+#companion.disabled {
+    display:
+        none;
+}
+
+
+/* =========================================================
+   IDLE
+========================================================= */
+
+@keyframes companion-idle {
+
+    0%,
+    100% {
+        transform:
+            translateX(-50%)
+            scale(var(--pet-scale, 1))
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            scale(var(--pet-scale, 1))
+            translateY(
+                calc(
+                    var(--idle-distance, 5px)
+                    * -1
+                )
+            )
+            rotate(
+                0.5deg
+            );
+    }
+}
+
+
+/* =========================================================
+   SHADOW IDLE
+========================================================= */
+
+@keyframes companion-shadow {
+
+    0%,
+    100% {
+        transform:
+            translateX(-50%)
+            translateY(var(--shadow-offset-y, 7px))
+            scaleX(var(--shadow-scale-x, 0.88))
+            scaleY(var(--shadow-scale-y, 0.18));
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            translateY(var(--shadow-offset-y, 7px))
+            scaleX(
+                calc(
+                    var(--shadow-scale-x, 0.88)
+                    * 0.92
+                )
+            )
+            scaleY(
+                calc(
+                    var(--shadow-scale-y, 0.18)
+                    * 0.85
+                )
+            );
+    }
+}
+
+
+/* =========================================================
+   TALK
+========================================================= */
+
+@keyframes companion-talk {
+
+    0% {
+        transform:
+            translateX(-50%)
+            scale(var(--pet-scale, 1))
+            translateY(0)
+            rotate(-1deg);
+    }
+
+    100% {
+        transform:
+            translateX(-50%)
+            scale(var(--pet-scale, 1))
+            translateY(-4px)
+            rotate(1deg);
+    }
+}
+
+@keyframes companion-talk-shadow {
+
+    0% {
+        opacity:
+            var(--shadow-opacity, 0.28);
+
+        transform:
+            translateX(-50%)
+            translateY(var(--shadow-offset-y, 7px))
+            scaleX(var(--shadow-scale-x, 0.88))
+            scaleY(var(--shadow-scale-y, 0.18));
+    }
+
+    100% {
+        opacity:
+            calc(
+                var(--shadow-opacity, 0.28)
+                * 0.7
+            );
+
+        transform:
+            translateX(-50%)
+            translateY(var(--shadow-offset-y, 7px))
+            scaleX(
+                calc(
+                    var(--shadow-scale-x, 0.88)
+                    * 0.86
+                )
+            )
+            scaleY(
+                calc(
+                    var(--shadow-scale-y, 0.18)
+                    * 0.82
+                )
+            );
+    }
+}
+
+
+/* =========================================================
+   THINKING
+========================================================= */
+
+@keyframes companion-thinking {
+
+    0%,
+    100% {
+        transform:
+            translateX(-50%)
+            scale(var(--pet-scale, 1))
+            rotate(-2deg);
+    }
+
+    50% {
+        transform:
+            translateX(-46%)
+            scale(var(--pet-scale, 1))
+            rotate(2deg);
+    }
+}
+
+
+/* =========================================================
+   NAME
+========================================================= */
+
+@keyframes name-talk {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-2px);
+    }
+}
+
+
+/* =========================================================
+   BUBBLE
+========================================================= */
+
+@keyframes bubble-in {
+
+    0% {
+        opacity:
+            0;
+
+        transform:
+            scale(0.82);
+    }
+
+    100% {
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   ENTRY
+========================================================= */
+
+@keyframes companion-enter {
+
+    0% {
+        opacity:
+            0;
+
+        transform:
+            translateX(-50%)
+            scale(
+                calc(
+                    var(--pet-scale, 1)
+                    * 0.75
+                )
+            )
+            translateY(40px);
+    }
+
+    60% {
+        opacity:
+            1;
+
+        transform:
+            translateX(-50%)
+            scale(
+                calc(
+                    var(--pet-scale, 1)
+                    * 1.05
+                )
+            )
+            translateY(-8px);
+    }
+
+    100% {
+        opacity:
+            1;
+
+        transform:
+            translateX(-50%)
+            scale(var(--pet-scale, 1))
+            translateY(0);
+    }
+}
