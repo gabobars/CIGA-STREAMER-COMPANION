@@ -361,8 +361,7 @@ ciga-companion/
 ├── index.html
 ├── style.css
 ├── script.js
-└── screenshots/
-    └── preview.png
+└── ciga.png
 ```
 
 ---
