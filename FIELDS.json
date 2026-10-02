@@ -1,0 +1,964 @@
+{
+  "widgetName": {
+    "type": "hidden",
+    "value": "CIGA Companion"
+  },
+  "enabled": {
+    "type": "checkbox",
+    "label": "Enabled",
+    "value": true,
+    "group": "01 // COMPANION"
+  },
+  "showHelpTips": {
+    "type": "checkbox",
+    "label": "Show Help Tips In Widget",
+    "value": true,
+    "group": "01 // COMPANION"
+  },
+  "helpNotice": {
+    "type": "text",
+    "label": "ℹ️ Changes require SAVE before they take effect",
+    "value": "Use the Help Tips for a quick guide to Companion features and custom responses.",
+    "group": "01 // COMPANION"
+  },
+  "companionName": {
+    "type": "text",
+    "label": "Companion Name",
+    "value": "COMPANION",
+    "group": "01 // COMPANION"
+  },
+  "petImage": {
+    "type": "image-input",
+    "label": "Companion Image — PNG / JPG / GIF",
+    "group": "01 // COMPANION"
+  },
+  "petSize": {
+    "type": "slider",
+    "label": "Image Size — base size",
+    "value": 180,
+    "min": 30,
+    "max": 1000,
+    "step": 5,
+    "group": "01 // COMPANION"
+  },
+  "petScale": {
+    "type": "slider",
+    "label": "Image Scale — visual multiplier",
+    "value": 1,
+    "min": 0.25,
+    "max": 3,
+    "step": 0.05,
+    "group": "01 // COMPANION"
+  },
+  "idleDistance": {
+    "type": "slider",
+    "label": "Idle Breathing Amount",
+    "value": 5,
+    "min": 0,
+    "max": 50,
+    "step": 1,
+    "group": "01 // COMPANION"
+  },
+  "shadowEnabled": {
+    "type": "checkbox",
+    "label": "Enable Shadow",
+    "value": true,
+    "group": "02 // SHADOW"
+  },
+  "shadowOpacity": {
+    "type": "slider",
+    "label": "Shadow Opacity",
+    "value": 0.28,
+    "min": 0,
+    "max": 1,
+    "step": 0.01,
+    "group": "02 // SHADOW"
+  },
+  "shadowBlur": {
+    "type": "slider",
+    "label": "Shadow Blur",
+    "value": 5,
+    "min": 0,
+    "max": 40,
+    "step": 1,
+    "group": "02 // SHADOW"
+  },
+  "shadowScaleX": {
+    "type": "slider",
+    "label": "Shadow Width",
+    "value": 0.88,
+    "min": 0.1,
+    "max": 3,
+    "step": 0.02,
+    "group": "02 // SHADOW"
+  },
+  "shadowScaleY": {
+    "type": "slider",
+    "label": "Shadow Height",
+    "value": 0.18,
+    "min": 0.02,
+    "max": 1,
+    "step": 0.01,
+    "group": "02 // SHADOW"
+  },
+  "shadowOffsetY": {
+    "type": "slider",
+    "label": "Shadow Vertical Offset",
+    "value": 7,
+    "min": -100,
+    "max": 200,
+    "step": 1,
+    "group": "02 // SHADOW"
+  },
+  "randomSpeechEnabled": {
+    "type": "checkbox",
+    "label": "Random Speech Enabled",
+    "value": true,
+    "group": "03 // RANDOM SPEECH"
+  },
+  "randomSpeechMinSec": {
+    "type": "slider",
+    "label": "Minimum Interval",
+    "value": 30,
+    "min": 1,
+    "max": 600,
+    "step": 1,
+    "group": "03 // RANDOM SPEECH"
+  },
+  "randomSpeechMaxSec": {
+    "type": "slider",
+    "label": "Maximum Interval",
+    "value": 90,
+    "min": 1,
+    "max": 600,
+    "step": 1,
+    "group": "03 // RANDOM SPEECH"
+  },
+  "randomLines": {
+    "type": "text",
+    "label": "Random Lines — use | between lines",
+    "value": "I'm watching.|Did someone say something?|I'm hungry.|What are we doing?|Interesting...|I'm here.|...",
+    "group": "03 // RANDOM SPEECH"
+  },
+  "greetingEnabled": {
+    "type": "checkbox",
+    "label": "Greeting Responses",
+    "value": true,
+    "group": "04 // CHAT"
+  },
+  "greetingTriggers": {
+    "type": "text",
+    "label": "Greeting Triggers — use | between",
+    "value": "hello|hi|hey|good morning|good afternoon|good evening",
+    "group": "04 // CHAT"
+  },
+  "greetingResponses": {
+    "type": "text",
+    "label": "Greeting Responses — {user} = viewer name",
+    "value": "Hello, {user}!|Hi, {user}!|Hey, {user}!|Hello {user}.|Hey {user}, welcome!",
+    "group": "04 // CHAT"
+  },
+  "greetingCooldownSec": {
+    "type": "slider",
+    "label": "Greeting Cooldown",
+    "value": 5,
+    "min": 0,
+    "max": 120,
+    "step": 1,
+    "group": "04 // CHAT"
+  },
+  "queueLimit": {
+    "type": "slider",
+    "label": "Maximum Speech Queue",
+    "value": 3,
+    "min": 1,
+    "max": 20,
+    "step": 1,
+    "group": "04 // CHAT"
+  },
+  "maxMessageCharacters": {
+    "type": "slider",
+    "label": "Maximum Chat Message Characters",
+    "value": 120,
+    "min": 10,
+    "max": 500,
+    "step": 5,
+    "group": "04 // CHAT"
+  },
+  "maxBubbleCharacters": {
+    "type": "slider",
+    "label": "Maximum Bubble Characters — does NOT limit TTS",
+    "value": 120,
+    "min": 10,
+    "max": 1000,
+    "step": 10,
+    "group": "04 // CHAT"
+  },
+  "commandEnabled": {
+    "type": "checkbox",
+    "label": "Enable Companion Command",
+    "value": true,
+    "group": "04 // CHAT"
+  },
+  "command": {
+    "type": "text",
+    "label": "Companion Command — example: !companion",
+    "value": "!companion",
+    "group": "04 // CHAT"
+  },
+  "commandTimeoutSec": {
+    "type": "slider",
+    "label": "Bot Response Timeout",
+    "value": 8,
+    "min": 1,
+    "max": 60,
+    "step": 1,
+    "group": "04 // CHAT"
+  },
+  "customResponse1Enabled": {
+    "type": "checkbox",
+    "label": "Enabled",
+    "value": true,
+    "group": "05 // CUSTOM RESPONSE 01"
+  },
+  "customResponse1BotName": {
+    "type": "text",
+    "label": "Bot / Sender Name — exact sender name",
+    "value": "CIGA Systems",
+    "group": "05 // CUSTOM RESPONSE 01"
+  },
+  "customResponse1Mode": {
+    "type": "dropdown",
+    "label": "Response Mode",
+    "value": "AFTER",
+    "options": {
+      "AFTER": "After Start Text",
+      "BETWEEN": "Between Start and End Text",
+      "COMMAND": "Wait for Bot Response",
+      "EXACT": "Exact Chat Message"
+    },
+    "group": "05 // CUSTOM RESPONSE 01"
+  },
+  "customResponse1Command": {
+    "type": "text",
+    "label": "Command Trigger — e.g. !joke",
+    "value": "",
+    "group": "05 // CUSTOM RESPONSE 01"
+  },
+  "customResponse1ExactText": {
+    "type": "text",
+    "label": "Exact Match Text — case-insensitive exact match",
+    "value": "",
+    "group": "05 // CUSTOM RESPONSE 01"
+  },
+  "customResponse1Start": {
+    "type": "text",
+    "label": "Start Text — AFTER/BETWEEN only",
+    "value": "CIGA // Song added to queue:",
+    "group": "05 // CUSTOM RESPONSE 01"
+  },
+  "customResponse1End": {
+    "type": "text",
+    "label": "End Text — BETWEEN only",
+    "value": "",
+    "group": "05 // CUSTOM RESPONSE 01"
+  },
+  "customResponse1Response": {
+    "type": "text",
+    "label": "Companion Response — {value}=matched text, {user}=viewer",
+    "value": "{value} has been added to the queue.",
+    "group": "05 // CUSTOM RESPONSE 01"
+  },
+  "customResponse1Ignore": {
+    "type": "checkbox",
+    "label": "Ignore Response Text",
+    "value": false,
+    "group": "05 // CUSTOM RESPONSE 01"
+  },
+  "customResponse2Enabled": {
+    "type": "checkbox",
+    "label": "Enabled",
+    "value": false,
+    "group": "06 // CUSTOM RESPONSE 02"
+  },
+  "customResponse2BotName": {
+    "type": "text",
+    "label": "Bot / Sender Name — exact sender name",
+    "value": "",
+    "group": "06 // CUSTOM RESPONSE 02"
+  },
+  "customResponse2Mode": {
+    "type": "dropdown",
+    "label": "Response Mode",
+    "value": "AFTER",
+    "options": {
+      "AFTER": "After Start Text",
+      "BETWEEN": "Between Start and End Text",
+      "COMMAND": "Wait for Bot Response",
+      "EXACT": "Exact Chat Message"
+    },
+    "group": "06 // CUSTOM RESPONSE 02"
+  },
+  "customResponse2Command": {
+    "type": "text",
+    "label": "Command Trigger — e.g. !joke",
+    "value": "",
+    "group": "06 // CUSTOM RESPONSE 02"
+  },
+  "customResponse2ExactText": {
+    "type": "text",
+    "label": "Exact Match Text — case-insensitive exact match",
+    "value": "",
+    "group": "06 // CUSTOM RESPONSE 02"
+  },
+  "customResponse2Start": {
+    "type": "text",
+    "label": "Start Text — AFTER/BETWEEN only",
+    "value": "",
+    "group": "06 // CUSTOM RESPONSE 02"
+  },
+  "customResponse2End": {
+    "type": "text",
+    "label": "End Text — BETWEEN only",
+    "value": "",
+    "group": "06 // CUSTOM RESPONSE 02"
+  },
+  "customResponse2Response": {
+    "type": "text",
+    "label": "Companion Response — {value}=matched text, {user}=viewer",
+    "value": "{value}",
+    "group": "06 // CUSTOM RESPONSE 02"
+  },
+  "customResponse2Ignore": {
+    "type": "checkbox",
+    "label": "Ignore Response Text",
+    "value": false,
+    "group": "06 // CUSTOM RESPONSE 02"
+  },
+  "customResponse3Enabled": {
+    "type": "checkbox",
+    "label": "Enabled",
+    "value": false,
+    "group": "07 // CUSTOM RESPONSE 03"
+  },
+  "customResponse3BotName": {
+    "type": "text",
+    "label": "Bot / Sender Name — exact sender name",
+    "value": "",
+    "group": "07 // CUSTOM RESPONSE 03"
+  },
+  "customResponse3Mode": {
+    "type": "dropdown",
+    "label": "Response Mode",
+    "value": "AFTER",
+    "options": {
+      "AFTER": "After Start Text",
+      "BETWEEN": "Between Start and End Text",
+      "COMMAND": "Wait for Bot Response",
+      "EXACT": "Exact Chat Message"
+    },
+    "group": "07 // CUSTOM RESPONSE 03"
+  },
+  "customResponse3Command": {
+    "type": "text",
+    "label": "Command Trigger — e.g. !joke",
+    "value": "",
+    "group": "07 // CUSTOM RESPONSE 03"
+  },
+  "customResponse3ExactText": {
+    "type": "text",
+    "label": "Exact Match Text — case-insensitive exact match",
+    "value": "",
+    "group": "07 // CUSTOM RESPONSE 03"
+  },
+  "customResponse3Start": {
+    "type": "text",
+    "label": "Start Text — AFTER/BETWEEN only",
+    "value": "",
+    "group": "07 // CUSTOM RESPONSE 03"
+  },
+  "customResponse3End": {
+    "type": "text",
+    "label": "End Text — BETWEEN only",
+    "value": "",
+    "group": "07 // CUSTOM RESPONSE 03"
+  },
+  "customResponse3Response": {
+    "type": "text",
+    "label": "Companion Response — {value}=matched text, {user}=viewer",
+    "value": "{value}",
+    "group": "07 // CUSTOM RESPONSE 03"
+  },
+  "customResponse3Ignore": {
+    "type": "checkbox",
+    "label": "Ignore Response Text",
+    "value": false,
+    "group": "07 // CUSTOM RESPONSE 03"
+  },
+  "customResponse4Enabled": {
+    "type": "checkbox",
+    "label": "Enabled",
+    "value": false,
+    "group": "08 // CUSTOM RESPONSE 04"
+  },
+  "customResponse4BotName": {
+    "type": "text",
+    "label": "Bot / Sender Name — exact sender name",
+    "value": "",
+    "group": "08 // CUSTOM RESPONSE 04"
+  },
+  "customResponse4Mode": {
+    "type": "dropdown",
+    "label": "Response Mode",
+    "value": "AFTER",
+    "options": {
+      "AFTER": "After Start Text",
+      "BETWEEN": "Between Start and End Text",
+      "COMMAND": "Wait for Bot Response",
+      "EXACT": "Exact Chat Message"
+    },
+    "group": "08 // CUSTOM RESPONSE 04"
+  },
+  "customResponse4Command": {
+    "type": "text",
+    "label": "Command Trigger — e.g. !joke",
+    "value": "",
+    "group": "08 // CUSTOM RESPONSE 04"
+  },
+  "customResponse4ExactText": {
+    "type": "text",
+    "label": "Exact Match Text — case-insensitive exact match",
+    "value": "",
+    "group": "08 // CUSTOM RESPONSE 04"
+  },
+  "customResponse4Start": {
+    "type": "text",
+    "label": "Start Text — AFTER/BETWEEN only",
+    "value": "",
+    "group": "08 // CUSTOM RESPONSE 04"
+  },
+  "customResponse4End": {
+    "type": "text",
+    "label": "End Text — BETWEEN only",
+    "value": "",
+    "group": "08 // CUSTOM RESPONSE 04"
+  },
+  "customResponse4Response": {
+    "type": "text",
+    "label": "Companion Response — {value}=matched text, {user}=viewer",
+    "value": "{value}",
+    "group": "08 // CUSTOM RESPONSE 04"
+  },
+  "customResponse4Ignore": {
+    "type": "checkbox",
+    "label": "Ignore Response Text",
+    "value": false,
+    "group": "08 // CUSTOM RESPONSE 04"
+  },
+  "customResponse5Enabled": {
+    "type": "checkbox",
+    "label": "Enabled",
+    "value": false,
+    "group": "09 // CUSTOM RESPONSE 05"
+  },
+  "customResponse5BotName": {
+    "type": "text",
+    "label": "Bot / Sender Name — exact sender name",
+    "value": "",
+    "group": "09 // CUSTOM RESPONSE 05"
+  },
+  "customResponse5Mode": {
+    "type": "dropdown",
+    "label": "Response Mode",
+    "value": "AFTER",
+    "options": {
+      "AFTER": "After Start Text",
+      "BETWEEN": "Between Start and End Text",
+      "COMMAND": "Wait for Bot Response",
+      "EXACT": "Exact Chat Message"
+    },
+    "group": "09 // CUSTOM RESPONSE 05"
+  },
+  "customResponse5Command": {
+    "type": "text",
+    "label": "Command Trigger — e.g. !joke",
+    "value": "",
+    "group": "09 // CUSTOM RESPONSE 05"
+  },
+  "customResponse5ExactText": {
+    "type": "text",
+    "label": "Exact Match Text — case-insensitive exact match",
+    "value": "",
+    "group": "09 // CUSTOM RESPONSE 05"
+  },
+  "customResponse5Start": {
+    "type": "text",
+    "label": "Start Text — AFTER/BETWEEN only",
+    "value": "",
+    "group": "09 // CUSTOM RESPONSE 05"
+  },
+  "customResponse5End": {
+    "type": "text",
+    "label": "End Text — BETWEEN only",
+    "value": "",
+    "group": "09 // CUSTOM RESPONSE 05"
+  },
+  "customResponse5Response": {
+    "type": "text",
+    "label": "Companion Response — {value}=matched text, {user}=viewer",
+    "value": "{value}",
+    "group": "09 // CUSTOM RESPONSE 05"
+  },
+  "customResponse5Ignore": {
+    "type": "checkbox",
+    "label": "Ignore Response Text",
+    "value": false,
+    "group": "09 // CUSTOM RESPONSE 05"
+  },
+  "customResponse6Enabled": {
+    "type": "checkbox",
+    "label": "Enabled",
+    "value": false,
+    "group": "10 // CUSTOM RESPONSE 06"
+  },
+  "customResponse6BotName": {
+    "type": "text",
+    "label": "Bot / Sender Name — exact sender name",
+    "value": "",
+    "group": "10 // CUSTOM RESPONSE 06"
+  },
+  "customResponse6Mode": {
+    "type": "dropdown",
+    "label": "Response Mode",
+    "value": "AFTER",
+    "options": {
+      "AFTER": "After Start Text",
+      "BETWEEN": "Between Start and End Text",
+      "COMMAND": "Wait for Bot Response",
+      "EXACT": "Exact Chat Message"
+    },
+    "group": "10 // CUSTOM RESPONSE 06"
+  },
+  "customResponse6Command": {
+    "type": "text",
+    "label": "Command Trigger — e.g. !joke",
+    "value": "",
+    "group": "10 // CUSTOM RESPONSE 06"
+  },
+  "customResponse6ExactText": {
+    "type": "text",
+    "label": "Exact Match Text — case-insensitive exact match",
+    "value": "",
+    "group": "10 // CUSTOM RESPONSE 06"
+  },
+  "customResponse6Start": {
+    "type": "text",
+    "label": "Start Text — AFTER/BETWEEN only",
+    "value": "",
+    "group": "10 // CUSTOM RESPONSE 06"
+  },
+  "customResponse6End": {
+    "type": "text",
+    "label": "End Text — BETWEEN only",
+    "value": "",
+    "group": "10 // CUSTOM RESPONSE 06"
+  },
+  "customResponse6Response": {
+    "type": "text",
+    "label": "Companion Response — {value}=matched text, {user}=viewer",
+    "value": "{value}",
+    "group": "10 // CUSTOM RESPONSE 06"
+  },
+  "customResponse6Ignore": {
+    "type": "checkbox",
+    "label": "Ignore Response Text",
+    "value": false,
+    "group": "10 // CUSTOM RESPONSE 06"
+  },
+  "customResponse7Enabled": {
+    "type": "checkbox",
+    "label": "Enabled",
+    "value": false,
+    "group": "11 // CUSTOM RESPONSE 07"
+  },
+  "customResponse7BotName": {
+    "type": "text",
+    "label": "Bot / Sender Name — exact sender name",
+    "value": "",
+    "group": "11 // CUSTOM RESPONSE 07"
+  },
+  "customResponse7Mode": {
+    "type": "dropdown",
+    "label": "Response Mode",
+    "value": "AFTER",
+    "options": {
+      "AFTER": "After Start Text",
+      "BETWEEN": "Between Start and End Text",
+      "COMMAND": "Wait for Bot Response",
+      "EXACT": "Exact Chat Message"
+    },
+    "group": "11 // CUSTOM RESPONSE 07"
+  },
+  "customResponse7Command": {
+    "type": "text",
+    "label": "Command Trigger — e.g. !joke",
+    "value": "",
+    "group": "11 // CUSTOM RESPONSE 07"
+  },
+  "customResponse7ExactText": {
+    "type": "text",
+    "label": "Exact Match Text — case-insensitive exact match",
+    "value": "",
+    "group": "11 // CUSTOM RESPONSE 07"
+  },
+  "customResponse7Start": {
+    "type": "text",
+    "label": "Start Text — AFTER/BETWEEN only",
+    "value": "",
+    "group": "11 // CUSTOM RESPONSE 07"
+  },
+  "customResponse7End": {
+    "type": "text",
+    "label": "End Text — BETWEEN only",
+    "value": "",
+    "group": "11 // CUSTOM RESPONSE 07"
+  },
+  "customResponse7Response": {
+    "type": "text",
+    "label": "Companion Response — {value}=matched text, {user}=viewer",
+    "value": "{value}",
+    "group": "11 // CUSTOM RESPONSE 07"
+  },
+  "customResponse7Ignore": {
+    "type": "checkbox",
+    "label": "Ignore Response Text",
+    "value": false,
+    "group": "11 // CUSTOM RESPONSE 07"
+  },
+  "customResponse8Enabled": {
+    "type": "checkbox",
+    "label": "Enabled",
+    "value": false,
+    "group": "12 // CUSTOM RESPONSE 08"
+  },
+  "customResponse8BotName": {
+    "type": "text",
+    "label": "Bot / Sender Name — exact sender name",
+    "value": "",
+    "group": "12 // CUSTOM RESPONSE 08"
+  },
+  "customResponse8Mode": {
+    "type": "dropdown",
+    "label": "Response Mode",
+    "value": "AFTER",
+    "options": {
+      "AFTER": "After Start Text",
+      "BETWEEN": "Between Start and End Text",
+      "COMMAND": "Wait for Bot Response",
+      "EXACT": "Exact Chat Message"
+    },
+    "group": "12 // CUSTOM RESPONSE 08"
+  },
+  "customResponse8Command": {
+    "type": "text",
+    "label": "Command Trigger — e.g. !joke",
+    "value": "",
+    "group": "12 // CUSTOM RESPONSE 08"
+  },
+  "customResponse8ExactText": {
+    "type": "text",
+    "label": "Exact Match Text — case-insensitive exact match",
+    "value": "",
+    "group": "12 // CUSTOM RESPONSE 08"
+  },
+  "customResponse8Start": {
+    "type": "text",
+    "label": "Start Text — AFTER/BETWEEN only",
+    "value": "",
+    "group": "12 // CUSTOM RESPONSE 08"
+  },
+  "customResponse8End": {
+    "type": "text",
+    "label": "End Text — BETWEEN only",
+    "value": "",
+    "group": "12 // CUSTOM RESPONSE 08"
+  },
+  "customResponse8Response": {
+    "type": "text",
+    "label": "Companion Response — {value}=matched text, {user}=viewer",
+    "value": "{value}",
+    "group": "12 // CUSTOM RESPONSE 08"
+  },
+  "customResponse8Ignore": {
+    "type": "checkbox",
+    "label": "Ignore Response Text",
+    "value": false,
+    "group": "12 // CUSTOM RESPONSE 08"
+  },
+  "customResponse9Enabled": {
+    "type": "checkbox",
+    "label": "Enabled",
+    "value": false,
+    "group": "13 // CUSTOM RESPONSE 09"
+  },
+  "customResponse9BotName": {
+    "type": "text",
+    "label": "Bot / Sender Name — exact sender name",
+    "value": "",
+    "group": "13 // CUSTOM RESPONSE 09"
+  },
+  "customResponse9Mode": {
+    "type": "dropdown",
+    "label": "Response Mode",
+    "value": "AFTER",
+    "options": {
+      "AFTER": "After Start Text",
+      "BETWEEN": "Between Start and End Text",
+      "COMMAND": "Wait for Bot Response",
+      "EXACT": "Exact Chat Message"
+    },
+    "group": "13 // CUSTOM RESPONSE 09"
+  },
+  "customResponse9Command": {
+    "type": "text",
+    "label": "Command Trigger — e.g. !joke",
+    "value": "",
+    "group": "13 // CUSTOM RESPONSE 09"
+  },
+  "customResponse9ExactText": {
+    "type": "text",
+    "label": "Exact Match Text — case-insensitive exact match",
+    "value": "",
+    "group": "13 // CUSTOM RESPONSE 09"
+  },
+  "customResponse9Start": {
+    "type": "text",
+    "label": "Start Text — AFTER/BETWEEN only",
+    "value": "",
+    "group": "13 // CUSTOM RESPONSE 09"
+  },
+  "customResponse9End": {
+    "type": "text",
+    "label": "End Text — BETWEEN only",
+    "value": "",
+    "group": "13 // CUSTOM RESPONSE 09"
+  },
+  "customResponse9Response": {
+    "type": "text",
+    "label": "Companion Response — {value}=matched text, {user}=viewer",
+    "value": "{value}",
+    "group": "13 // CUSTOM RESPONSE 09"
+  },
+  "customResponse9Ignore": {
+    "type": "checkbox",
+    "label": "Ignore Response Text",
+    "value": false,
+    "group": "13 // CUSTOM RESPONSE 09"
+  },
+  "customResponse10Enabled": {
+    "type": "checkbox",
+    "label": "Enabled",
+    "value": false,
+    "group": "14 // CUSTOM RESPONSE 10"
+  },
+  "customResponse10BotName": {
+    "type": "text",
+    "label": "Bot / Sender Name — exact sender name",
+    "value": "",
+    "group": "14 // CUSTOM RESPONSE 10"
+  },
+  "customResponse10Mode": {
+    "type": "dropdown",
+    "label": "Response Mode",
+    "value": "AFTER",
+    "options": {
+      "AFTER": "After Start Text",
+      "BETWEEN": "Between Start and End Text",
+      "COMMAND": "Wait for Bot Response",
+      "EXACT": "Exact Chat Message"
+    },
+    "group": "14 // CUSTOM RESPONSE 10"
+  },
+  "customResponse10Command": {
+    "type": "text",
+    "label": "Command Trigger — e.g. !joke",
+    "value": "",
+    "group": "14 // CUSTOM RESPONSE 10"
+  },
+  "customResponse10ExactText": {
+    "type": "text",
+    "label": "Exact Match Text — case-insensitive exact match",
+    "value": "",
+    "group": "14 // CUSTOM RESPONSE 10"
+  },
+  "customResponse10Start": {
+    "type": "text",
+    "label": "Start Text — AFTER/BETWEEN only",
+    "value": "",
+    "group": "14 // CUSTOM RESPONSE 10"
+  },
+  "customResponse10End": {
+    "type": "text",
+    "label": "End Text — BETWEEN only",
+    "value": "",
+    "group": "14 // CUSTOM RESPONSE 10"
+  },
+  "customResponse10Response": {
+    "type": "text",
+    "label": "Companion Response — {value}=matched text, {user}=viewer",
+    "value": "{value}",
+    "group": "14 // CUSTOM RESPONSE 10"
+  },
+  "customResponse10Ignore": {
+    "type": "checkbox",
+    "label": "Ignore Response Text",
+    "value": false,
+    "group": "14 // CUSTOM RESPONSE 10"
+  },
+  "ttsEnabled": {
+    "type": "checkbox",
+    "label": "Enable TTS",
+    "value": true,
+    "group": "15 // TTS"
+  },
+  "ttsVoice": {
+    "type": "dropdown",
+    "label": "TTS Voice",
+    "value": "Brian",
+    "options": {
+      "Cristiano": "Cristiano — ♂ Portuguese (Portugal)",
+      "Ines": "Ines — ♀ Portuguese (Portugal)",
+      "Camila": "Camila — ♀ Portuguese (Brazil)",
+      "Ricardo": "Ricardo — ♂ Portuguese (Brazil)",
+      "Brian": "Brian — ♂ English (UK)",
+      "Amy": "Amy — ♀ English (UK)",
+      "Emma": "Emma — ♀ English (UK)",
+      "Matthew": "Matthew — ♂ English (US)",
+      "Joanna": "Joanna — ♀ English (US)",
+      "Russell": "Russell — ♂ English (Australia)",
+      "Nicole": "Nicole — ♀ English (Australia)",
+      "Enrique": "Enrique — ♂ Spanish (Spain)",
+      "Conchita": "Conchita — ♀ Spanish (Spain)",
+      "Miguel": "Miguel — ♂ Spanish (US)",
+      "Penelope": "Penelope — ♀ Spanish (US)",
+      "Mathieu": "Mathieu — ♂ French (France)",
+      "Celine": "Celine — ♀ French (France)",
+      "Hans": "Hans — ♂ German (Germany)",
+      "Marlene": "Marlene — ♀ German (Germany)",
+      "Giorgio": "Giorgio — ♂ Italian (Italy)",
+      "Carla": "Carla — ♀ Italian (Italy)",
+      "Takumi": "Takumi — ♂ Japanese (Japan)",
+      "Mizuki": "Mizuki — ♀ Japanese (Japan)",
+      "Maxim": "Maxim — ♂ Russian",
+      "Tatyana": "Tatyana — ♀ Russian",
+      "Ruben": "Ruben — ♂ Dutch",
+      "Lotte": "Lotte — ♀ Dutch",
+      "Jan": "Jan — ♂ Polish",
+      "Ewa": "Ewa — ♀ Polish",
+      "Karl": "Karl — ♂ Icelandic",
+      "Dora": "Dora — ♀ Icelandic",
+      "Maja": "Maja — ♀ Polish",
+      "Jacek": "Jacek — ♂ Polish",
+      "Filiz": "Filiz — ♀ Turkish",
+      "Gwyneth": "Gwyneth — ♀ Welsh",
+      "Carmen": "Carmen — ♀ Romanian",
+      "Astrid": "Astrid — ♀ Swedish",
+      "Seoyeon": "Seoyeon — ♀ Korean",
+      "Zhiyu": "Zhiyu — ♂ Chinese Mandarin"
+    },
+    "group": "15 // TTS"
+  },
+  "ttsVolume": {
+    "type": "slider",
+    "label": "TTS Volume",
+    "value": 100,
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "group": "15 // TTS"
+  },
+  "nameEnabled": {
+    "type": "checkbox",
+    "label": "Show Companion Name",
+    "value": true,
+    "group": "16 // NAME"
+  },
+  "nameColor": {
+    "type": "colorpicker",
+    "label": "Name Color",
+    "value": "#FFFFFF",
+    "group": "16 // NAME"
+  },
+  "nameFontSize": {
+    "type": "slider",
+    "label": "Name Size",
+    "value": 20,
+    "min": 8,
+    "max": 100,
+    "step": 1,
+    "group": "16 // NAME"
+  },
+  "nameGap": {
+    "type": "slider",
+    "label": "Name Gap From Pet",
+    "value": 10,
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "group": "16 // NAME"
+  },
+  "bubbleBackground": {
+    "type": "colorpicker",
+    "label": "Bubble Background",
+    "value": "#F3F0E6",
+    "group": "17 // BUBBLE"
+  },
+  "bubbleTextColor": {
+    "type": "colorpicker",
+    "label": "Bubble Text Color",
+    "value": "#111111",
+    "group": "17 // BUBBLE"
+  },
+  "bubbleBorderColor": {
+    "type": "colorpicker",
+    "label": "Bubble Border Color",
+    "value": "#111111",
+    "group": "17 // BUBBLE"
+  },
+  "bubbleFontSize": {
+    "type": "slider",
+    "label": "Bubble Font Size",
+    "value": 19,
+    "min": 8,
+    "max": 100,
+    "step": 1,
+    "group": "17 // BUBBLE"
+  },
+  "bubbleMaxWidth": {
+    "type": "slider",
+    "label": "Bubble Maximum Width",
+    "value": 360,
+    "min": 100,
+    "max": 1000,
+    "step": 10,
+    "group": "17 // BUBBLE"
+  },
+  "bubbleDurationSec": {
+    "type": "slider",
+    "label": "Bubble Duration",
+    "value": 5,
+    "min": 1,
+    "max": 60,
+    "step": 0.5,
+    "group": "17 // BUBBLE"
+  },
+  "bubbleGap": {
+    "type": "slider",
+    "label": "Bubble Gap From Companion",
+    "value": 12,
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "group": "17 // BUBBLE"
+  }
+}
